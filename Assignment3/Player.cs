@@ -11,8 +11,7 @@ namespace Assignment3
     {
         private string name;
         private int level = 1;
-        private int gold;
-        private int xp;
+        private int xp = 0;
         private int xpToNextLevel = 150;
         private int hp = 200;
         private int atkDmg = 10;
@@ -20,12 +19,11 @@ namespace Assignment3
 
         public Player() { }
 
-        public Player(string name, int level, int gold, int xp, int xpToNextLevel, int hp, int atkDmg) 
+        public Player(string name, int level, int xp, int xpToNextLevel, int hp, int atkDmg)
         {
             this.Name = name;
             this.Level = level;
-            this.Gold = gold;
-        }
+        }    
 
         public int attack(IMonster monster)
         {
@@ -35,7 +33,6 @@ namespace Assignment3
 
         public string Name { get => name; set => name = value; }
         public int Level { get => level; set => level = value; }
-        public int Gold { get => gold; set => gold = value; }
         public int Xp { get => xp; set => xp = value; }
         public int XpToNextLevel { get => xpToNextLevel; set => xpToNextLevel = value; }
         public int Hp { get => hp; set => hp = value; }
@@ -45,6 +42,12 @@ namespace Assignment3
         public void takeDamage(int monsterdmg)
         {
             hp -= monsterdmg;
+        }
+
+        public override string ToString()
+        {
+            string status = $"\nName: {name}\n Level: {level}\nHP: {hp}\nXP: {xp}\nAttackDamage: {atkDmg}";
+            return status;
         }
     }
 }

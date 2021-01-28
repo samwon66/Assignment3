@@ -10,9 +10,9 @@ namespace Assignment3.Monsters
         {
             base.Name = "HotDog";
             base.Level = 1;
-            base.Xp = 110;
+            base.Xp = 100;
             base.Hp = 120;
-            base.AtkDmg = 120;
+            base.AtkDmg = 20;
             base.MaxHp = 120;
         }
 

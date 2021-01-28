@@ -12,7 +12,7 @@ namespace Assignment3.Monsters
             base.Level = 2;
             base.Xp = 130;
             base.Hp = 180;
-            base.AtkDmg = 180;
+            base.AtkDmg = 80;
             base.MaxHp = 180;
         }
 

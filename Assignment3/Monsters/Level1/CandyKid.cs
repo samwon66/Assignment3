@@ -11,7 +11,7 @@ namespace Assignment3.Monsters
             base.Name = "CandyKid";
             base.Level = 1;
             base.Hp = 100;
-            base.Xp = 110;
+            base.Xp = 50;
             base.AtkDmg = 10;
             base.MaxHp = 100;
         }

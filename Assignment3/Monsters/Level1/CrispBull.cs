@@ -10,7 +10,7 @@ namespace Assignment3.Monsters
         {
             base.Name = "CrispBull";
             base.Level = 1;
-            base.Xp = 100;
+            base.Xp = 80;
             base.Hp = 90;
             base.AtkDmg = 8;
             base.MaxHp = 90;
