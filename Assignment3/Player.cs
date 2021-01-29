@@ -16,28 +16,17 @@ namespace Assignment3
         private int hp = 200;
         private int maxHp = 200;
         private int atkDmg = 10;
-        //private bool isDead;
-
+       
         Random rn = new Random();
 
         public Player() { }
 
-        //public Player(string name, int level, int xp, int xpToNextLevel, int hp, int maxHp, int atkDmg) { }
-
         public int attack(IMonster monster)
         {
-            monster.takeDamage(rn.Next(AtkDmg));
-            return rn.Next(AtkDmg);
+            int pang = rn.Next(atkDmg);
+            monster.takeDamage(pang);
+            return pang;
         }
-
-        public string Name { get => name; set => name = value; }
-        public int Level { get => level; set => level = value; }
-        public int Xp { get => xp; set => xp = value; }
-        public int XpToNextLevel { get => xpToNextLevel; set => xpToNextLevel = value; }
-        public int Hp { get => hp; set => hp = value; }
-        public int MaxHp { get => maxHp; set => maxHp = value; }
-        public int AtkDmg { get => atkDmg; set => atkDmg = value; }
-        //public bool IsDead { get => isDead; set => isDead = value; }
 
         public void takeDamage(int monsterdmg)
         {
@@ -61,5 +50,14 @@ namespace Assignment3
             string status = $"\nName: {Name}\nLevel: {Level}\nHP: {Hp}\nXP: {Xp}\nAttackDamage: {AtkDmg}\n";
             return status;
         }
+
+        public string Name { get => name; set => name = value; }
+        public int Level { get => level; set => level = value; }
+        public int Xp { get => xp; set => xp = value; }
+        public int XpToNextLevel { get => xpToNextLevel; set => xpToNextLevel = value; }
+        public int Hp { get => hp; set => hp = value; }
+        public int MaxHp { get => maxHp; set => maxHp = value; }
+        public int AtkDmg { get => atkDmg; set => atkDmg = value; }
+      
     }
 }

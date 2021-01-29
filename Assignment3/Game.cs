@@ -50,15 +50,6 @@ namespace Assignment3
            
         }
 
-        //private void godMode()
-        //{
-        //    player.Hp = 2000;
-        //    player.AtkDmg = 100;
-        //    Console.Clear();
-        //    Console.WriteLine("\nSo you want to be God. \nSorry, our God is not immortal, but he has a better status than us.\nNo one walks safely in Wasteland, not even God... ");
-        //    Console.WriteLine($"Your new status:\n{player.ToString()}");
-        //}
-
         private void SetupGame()
         {
             CandyKid candy = new CandyKid();
@@ -138,8 +129,6 @@ namespace Assignment3
                 }
             }
             RespawnMonster();
-            
-
         }
 
         private void Battle(IMonster monster)
@@ -156,7 +145,6 @@ namespace Assignment3
                     player.Xp += monster.getExp();
                     Console.WriteLine($"Your XP is now {player.Xp}\n");
 
-                    //monster.isDead();
                     if (player.Level == 10)
                     {
                         Console.WriteLine("Wow, you won the game!");
@@ -184,7 +172,7 @@ namespace Assignment3
             monster.respawn();
         }
 
-        private void RespawnMonster()
+        private void RespawnMonster()//Metoden för att återställa monstrerna i listorna efter striden
         {
             foreach (Monster m in listOfMonsters1)
             {

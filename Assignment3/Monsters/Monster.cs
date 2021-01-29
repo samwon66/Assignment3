@@ -21,7 +21,7 @@ namespace Assignment3.Monsters
 
         public virtual int attack()
         {
-            return rn.Next(AtkDmg);
+            return rn.Next(atkDmg);
         }
 
         public virtual int getExp()
