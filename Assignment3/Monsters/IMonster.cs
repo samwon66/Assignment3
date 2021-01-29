@@ -12,6 +12,7 @@ namespace Assignment3.Monsters
         public string getName();
         public int getHp();
         public int getExp();
+        public void respawn();
 
     }
 }

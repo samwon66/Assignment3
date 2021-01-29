@@ -11,9 +11,9 @@ namespace Assignment3.Monsters
             base.Name = "PizzaMan";
             base.Level = 2;
             base.Xp = 130;
-            base.Hp = 260;
-            base.AtkDmg = 80;
-            base.MaxHp = 260;
+            base.Hp = 150;
+            base.AtkDmg = 14;
+            base.MaxHp = 150;
         }
 
         public override int attack()
@@ -44,6 +44,11 @@ namespace Assignment3.Monsters
         public override void takeDamage(int damage)
         {
             base.takeDamage(damage);
+        }
+
+        public override void respawn()
+        {
+            base.respawn();
         }
 
         public override string ToString()

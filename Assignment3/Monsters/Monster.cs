@@ -58,6 +58,12 @@ namespace Assignment3.Monsters
             this.hp -= damage;
         }
 
+        public virtual void respawn()
+        {
+            this.hp = maxHp;
+            this.dead = false;
+        }
+
         public string Name { get => name; set => name = value; }
         public int Level { get => level; set => level = value; }
         public int Xp { get => xp; set => xp = value; }

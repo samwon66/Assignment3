@@ -10,15 +10,15 @@ namespace Assignment3.Monsters
         {
             base.Name = "SodaBear";
             base.Level = 2;
-            base.Xp = 130;
-            base.Hp = 200;
-            base.AtkDmg = 100;
-            base.MaxHp = 200;
+            base.Xp = 150;
+            base.Hp = 160;
+            base.AtkDmg = 16;
+            base.MaxHp = 160;
         }
 
         public override int attack()
         {
-            Console.WriteLine("You don't belong here, have some fries!");
+            Console.WriteLine("Spray, spray, I will drunk you!");
             return base.attack();
         }
         public override int getExp()
@@ -46,9 +46,14 @@ namespace Assignment3.Monsters
             base.takeDamage(damage);
         }
 
+        public override void respawn()
+        {
+            base.respawn();
+        }
+
         public override string ToString()
         {
-            string desc = $"I am {Name}, wanna have a bite?";
+            string desc = $"Let's rock, I am {Name}.";
             return desc;
         }
     }

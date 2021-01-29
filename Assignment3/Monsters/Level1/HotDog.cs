@@ -11,9 +11,9 @@ namespace Assignment3.Monsters
             base.Name = "HotDog";
             base.Level = 1;
             base.Xp = 100;
-            base.Hp = 120;
-            base.AtkDmg = 20;
-            base.MaxHp = 120;
+            base.Hp = 60;
+            base.AtkDmg = 10;
+            base.MaxHp = 60;
         }
 
         public override int attack()
@@ -44,6 +44,11 @@ namespace Assignment3.Monsters
         public override void takeDamage(int damage)
         {
             base.takeDamage(damage);
+        }
+
+        public override void respawn()
+        {
+            base.respawn();
         }
 
         public override string ToString()

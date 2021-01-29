@@ -11,9 +11,9 @@ namespace Assignment3.Monsters
             base.Name = "HambugerWorrier";
             base.Level = 2;
             base.Xp = 130;
-            base.Hp = 180;
-            base.AtkDmg = 80;
-            base.MaxHp = 180;
+            base.Hp = 80;
+            base.AtkDmg = 12;
+            base.MaxHp = 80;
         }
 
         public override int attack()
@@ -44,6 +44,11 @@ namespace Assignment3.Monsters
         public override void takeDamage(int damage)
         {
             base.takeDamage(damage);
+        }
+
+        public override void respawn()
+        {
+            base.respawn();
         }
 
         public override string ToString()

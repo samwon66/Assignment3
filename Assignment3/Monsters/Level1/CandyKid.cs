@@ -10,10 +10,10 @@ namespace Assignment3.Monsters
         {
             base.Name = "CandyKid";
             base.Level = 1;
-            base.Hp = 100;
+            base.Hp = 50;
             base.Xp = 50;
-            base.AtkDmg = 10;
-            base.MaxHp = 100;
+            base.AtkDmg = 5;
+            base.MaxHp = 50;
         }
 
         public override int attack()
@@ -44,6 +44,11 @@ namespace Assignment3.Monsters
         public override void takeDamage(int damage)
         {
             base.takeDamage(damage);
+        }
+
+        public override void respawn()
+        {
+            base.respawn();
         }
 
         public override string ToString()

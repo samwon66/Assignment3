@@ -11,9 +11,9 @@ namespace Assignment3.Monsters
             base.Name = "CrispBull";
             base.Level = 1;
             base.Xp = 80;
-            base.Hp = 90;
+            base.Hp = 50;
             base.AtkDmg = 8;
-            base.MaxHp = 90;
+            base.MaxHp = 50;
         }
 
         public override int attack()
@@ -44,6 +44,11 @@ namespace Assignment3.Monsters
         public override void takeDamage(int damage)
         {
             base.takeDamage(damage);
+        }
+
+        public override void respawn()
+        {
+            base.respawn();
         }
 
         public override string ToString()

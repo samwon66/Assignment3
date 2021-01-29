@@ -14,21 +14,20 @@ namespace Assignment3
         private int xp = 0;
         private int xpToNextLevel = 150;
         private int hp = 200;
+        private int maxHp = 200;
         private int atkDmg = 10;
-        private bool isDead = true;
+        //private bool isDead;
+
+        Random rn = new Random();
 
         public Player() { }
 
-        public Player(string name, int level, int xp, int xpToNextLevel, int hp, int atkDmg)
-        {
-            this.Name = name;
-            this.Level = level;
-        }    
+        //public Player(string name, int level, int xp, int xpToNextLevel, int hp, int maxHp, int atkDmg) { }
 
         public int attack(IMonster monster)
         {
-            monster.takeDamage(AtkDmg);
-            return AtkDmg;
+            monster.takeDamage(rn.Next(AtkDmg));
+            return rn.Next(AtkDmg);
         }
 
         public string Name { get => name; set => name = value; }
@@ -36,14 +35,26 @@ namespace Assignment3
         public int Xp { get => xp; set => xp = value; }
         public int XpToNextLevel { get => xpToNextLevel; set => xpToNextLevel = value; }
         public int Hp { get => hp; set => hp = value; }
+        public int MaxHp { get => maxHp; set => maxHp = value; }
         public int AtkDmg { get => atkDmg; set => atkDmg = value; }
-        public bool IsDead { get => isDead; set => isDead = value; }
+        //public bool IsDead { get => isDead; set => isDead = value; }
 
         public void takeDamage(int monsterdmg)
         {
             hp -= monsterdmg;
         }
 
+        public void LevelCheck(int xp)//HP reset och öka efter att man har levlat
+        {
+            if (xp > xpToNextLevel)
+            {
+                level++;
+                xpToNextLevel += 100;
+                hp = maxHp + 40;
+                atkDmg += 4;
+                Console.WriteLine($"Wow, you level up! You're now Level {Level}");
+            }
+        }
         
         public override string ToString()
         {
