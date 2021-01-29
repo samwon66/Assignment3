@@ -44,9 +44,10 @@ namespace Assignment3
             hp -= monsterdmg;
         }
 
+        
         public override string ToString()
         {
-            string status = $"\nName: {name}\n Level: {level}\nHP: {hp}\nXP: {xp}\nAttackDamage: {atkDmg}";
+            string status = $"\nName: {Name}\nLevel: {Level}\nHP: {Hp}\nXP: {Xp}\nAttackDamage: {AtkDmg}\n";
             return status;
         }
     }
